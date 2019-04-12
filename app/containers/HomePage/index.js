@@ -10,16 +10,31 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import styled from 'styled-components';
+
+const GameBlock = styled.div`
+  flex: 1;
+  border: 1px solid red;
+`;
+
+const InfoBlock = styled.div`
+  width: 200px;
+  border: 1px solid blue;
+`;
+
+const MainPage = styled.div`
+  display: flex;
+  border: 1px solid green;
+`;
 
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <MainPage>
+        <GameBlock>this is the game container1111</GameBlock>
+        <InfoBlock>this is the info container2222</InfoBlock>
+      </MainPage>
     );
   }
 }
