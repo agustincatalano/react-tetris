@@ -1,4 +1,4 @@
-/*
+/* yarn
  * HomePage
  *
  * This is the first thing users see of our App, at the '/' route
@@ -11,22 +11,24 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import tetrisImage from '../../images/tetris.jpg';
+import gameImage from '../../images/game-image.jpg';
+import infoImage from '../../images/info-image.jpg';
 
 const GameBlock = styled.div`
   flex: 1;
   border: 1px solid red;
   class: game-block;
-  background-image: url(${tetrisImage});
+  background-image: url(${gameImage});
   display: flex;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
 `;
 
 const InfoBlock = styled.div`
   width: 200px;
   border: 1px solid blue;
+  background-image: url(${infoImage});
+  background-size: cover;
 `;
 
 const MainPage = styled.div`
@@ -52,6 +54,9 @@ const ArrowComponent = styled.li`
 
 const StartComponent = styled.button`
   border: 1px solid green;
+  background-color: green;
+  display: flex;
+  flex: 1;
 `;
 
 /* eslint-disable react/prefer-stateless-function */
@@ -66,13 +71,13 @@ export default class HomePage extends React.PureComponent {
           this is the info container2222
           <ScoreComponent className="score-component">
             {' '}
-            Score: xxx
+            Score: xxx{' '}
           </ScoreComponent>
           <LineComponent className="line-component"> Line: xx</LineComponent>
           <NextComponent className="next-component"> next: </NextComponent>
           <ArrowComponent className="arrows-component">
             {' '}
-            arrows here{' '}
+            arrows here
           </ArrowComponent>
           <StartComponent className="start-component"> Start </StartComponent>
         </InfoBlock>
