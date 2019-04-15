@@ -11,25 +11,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import gameImage from '../../images/game-image.jpg';
-import infoImage from '../../images/info-image.jpg';
-
-const GameBlock = styled.div`
-  flex: 1;
-  border: 1px solid red;
-  class: game-block;
-  background-image: url(${gameImage});
-  display: flex;
-  background-size: cover;
-  background-position: center;
-`;
-
-const InfoBlock = styled.div`
-  width: 200px;
-  border: 1px solid blue;
-  background-image: url(${infoImage});
-  background-size: cover;
-`;
+import InfoBlock from '../component/InfoBlock';
+import GameBlock from '../component/GameBlock';
 
 const MainPage = styled.div`
   display: flex;
@@ -65,21 +48,22 @@ export default class HomePage extends React.PureComponent {
     return (
       <MainPage className="main-page">
         <GameBlock background="app/images/tetris.jpg" className="game-Block">
-          this is the game container1111
+          {'this is the game container1111 '}
         </GameBlock>
         <InfoBlock className="info-Block">
-          this is the info container2222
+          {'this is the info container2222'}
           <ScoreComponent className="score-component">
-            {' '}
-            Score: xxx{' '}
+            {'Score: xxx '}
           </ScoreComponent>
-          <LineComponent className="line-component"> Line: xx</LineComponent>
+          <LineComponent className="line-component">Line: xx</LineComponent>
           <NextComponent className="next-component"> next: </NextComponent>
           <ArrowComponent className="arrows-component">
-            {' '}
-            arrows here
+            {'arrows here'}
           </ArrowComponent>
-          <StartComponent className="start-component"> Start </StartComponent>
+          <StartComponent className="start-component">
+            {' '}
+            {'Start '}
+          </StartComponent>
         </InfoBlock>
       </MainPage>
     );
