@@ -1,9 +1,8 @@
-
 import React from 'react';
 import styled from 'styled-components';
 import InfoBlock from '../../components/InfoComponent/InfoBlock';
 import GameBlock from '../../components/GameComponent/GameBlock';
-import {InfoBlock, GameBlock} from '../components'
+import { InfoBlock, GameBlock } from '../components';
 
 const MainPage = styled.div`
   display: flex;
@@ -32,7 +31,6 @@ const StartComponent = styled.button`
   display: flex;
   flex: 1;
 `;
-
 
 export default class HomePage extends React.PureComponent {
   render() {
