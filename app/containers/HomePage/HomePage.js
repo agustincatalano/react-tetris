@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import InfoBlock from '../../components/InfoComponent/InfoBlock';
-import GameBlock from '../../components/GameComponent/GameBlock';
-import { InfoBlock, GameBlock } from '../components';
+//import InfoBlock from '../../components/InfoComponent/InfoBlock';
+//import GameBlock from '../../components/GameComponent/GameBlock';
+import { InfoBlock, GameBlock } from '../component';
 
 const MainPage = styled.div`
   display: flex;

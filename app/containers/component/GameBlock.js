@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import gameImage from '../../images/game-image.jpg';
 
+
 const GameBlock = styled.div`
   flex: 1;
   border: 1px solid red;
