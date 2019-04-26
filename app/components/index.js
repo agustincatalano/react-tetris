@@ -1,1 +1,2 @@
-import * from 'GameBlock.js'
+export * from './Game'
+export * from './Info'

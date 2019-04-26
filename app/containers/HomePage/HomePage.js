@@ -1,38 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import InfoBlock from '../../components/InfoComponent/InfoBlock';
-import GameBlock from '../../components/GameComponent/GameBlock';
-import { InfoBlock, GameBlock } from '../components';
+import { InfoBlock, GameBlock } from '../../components';
 
 const MainPage = styled.div`
   display: flex;
   border: 1px solid green;
 `;
 
-const ScoreComponent = styled.li`
-  border: 1px solid green;
-`;
-
-const LineComponent = styled.li`
-  border: 1px solid green;
-`;
-
-const NextComponent = styled.li`
-  border: 1px solid green;
-`;
-
-const ArrowComponent = styled.li`
-  border: 1px solid green;
-`;
-
-const StartComponent = styled.button`
-  border: 1px solid green;
-  background-color: green;
-  display: flex;
-  flex: 1;
-`;
-
-export default class HomePage extends React.PureComponent {
+export class HomePage extends React.PureComponent {
   render() {
     return (
       <MainPage className="main-page">
@@ -50,8 +25,7 @@ export default class HomePage extends React.PureComponent {
             {'arrows here'}
           </ArrowComponent>
           <StartComponent className="start-component">
-            {' '}
-            {'Start '}
+            {'Start'}
           </StartComponent>
         </InfoBlock>
       </MainPage>
