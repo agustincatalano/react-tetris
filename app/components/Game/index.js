@@ -1,1 +1,1 @@
-export * from './GameBlock'
+export * from './GameBlock';

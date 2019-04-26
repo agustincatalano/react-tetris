@@ -24,9 +24,7 @@ export class HomePage extends React.PureComponent {
           <ArrowComponent className="arrows-component">
             {'arrows here'}
           </ArrowComponent>
-          <StartComponent className="start-component">
-            {'Start'}
-          </StartComponent>
+          <StartComponent className="start-component">Start</StartComponent>
         </InfoBlock>
       </MainPage>
     );
