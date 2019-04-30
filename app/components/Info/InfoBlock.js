@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import React from 'react';
-import infoImage from '../../images/info-image.jpg';
-import Score from './Score';
-import LineCounter from './LineCounter';
-import NextTetromino from './NextTetromino';
-import Arrows from './Arrows';
+import { infoImage } from '../../images/info-image.jpg';
+import { Score } from './Score';
+import { LineCounter } from './LineCounter';
+import { NextTetromino } from './NextTetromino';
+import { Arrows } from './Arrows';
 
 export const MyInfoBlock = styled.div`
   width: 200px;
