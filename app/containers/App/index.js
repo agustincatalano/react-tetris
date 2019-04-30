@@ -14,6 +14,7 @@ import { HomePage } from 'containers/HomePage';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 
 import GlobalStyle from '../../global-styles';
+console.log('HOMEPAGE', HomePage);
 
 export function App() {
   return (
