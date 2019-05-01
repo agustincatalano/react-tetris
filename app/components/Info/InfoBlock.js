@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import React from 'react';
-import { infoImage } from '../../images/info-image.jpg';
 import { Score } from './Score';
 import { LineCounter } from './LineCounter';
 import { NextTetromino } from './NextTetromino';
@@ -9,11 +8,8 @@ import { Arrows } from './Arrows';
 const MyInfoBlock = styled.div`
   width: 200px;
   border: 1px solid blue;
-  background-image: url(${infoImage});
   background-size: cover;
 `;
-
-// use StartGame in here somehow
 
 export function InfoBlock() {
   return (
