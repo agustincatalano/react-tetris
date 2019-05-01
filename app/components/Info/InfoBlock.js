@@ -6,7 +6,7 @@ import { LineCounter } from './LineCounter';
 import { NextTetromino } from './NextTetromino';
 import { Arrows } from './Arrows';
 
-export const MyInfoBlock = styled.div`
+const MyInfoBlock = styled.div`
   width: 200px;
   border: 1px solid blue;
   background-image: url(${infoImage});
