@@ -8,4 +8,4 @@ const InfoBlock = styled.div`
   background-size: cover;
 `;
 
-export default InfoBlock;
+export { InfoBlock };
