@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
+import { Stage, Layer, Text } from 'react-konva';
+import { ColoredRect } from '../figures';
 
 const MyGameBlock = styled.div`
   flex: 1;
@@ -11,5 +13,14 @@ const MyGameBlock = styled.div`
 `;
 
 export function GameBlock() {
-  return <MyGameBlock>This is GameBlock </MyGameBlock>;
+  return (
+    <MyGameBlock>
+      <Stage width="100" height="100">
+        <Layer>
+          <Text text="Try click on rect" />
+          <ColoredRect />
+        </Layer>
+      </Stage>
+    </MyGameBlock>
+  );
 }
