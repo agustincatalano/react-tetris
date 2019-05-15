@@ -4,7 +4,7 @@ import Konva from 'konva';
 
 export class ColoredRect extends React.Component {
   state = {
-    color: 'green',
+    color: 'blue',
   };
 
   handleClick = () => {
@@ -16,7 +16,7 @@ export class ColoredRect extends React.Component {
   render() {
     return (
       <Rect
-        x={20}
+        x={40}
         y={20}
         width={50}
         height={50}
