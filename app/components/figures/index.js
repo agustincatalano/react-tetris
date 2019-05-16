@@ -1,1 +1,2 @@
-export * from './ColorRect';
+export * from './I'
+export * from './HI'
