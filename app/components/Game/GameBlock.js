@@ -12,12 +12,10 @@ const MyGameBlock = styled.div`
   background-position: center;
 `;
 
-const colors = ['blue', 'red', 'green', 'yellow', 'orange', 'pink']
-const size = 25
+const colors = ['blue', 'red', 'green', 'yellow', 'orange', 'pink'];
+const size = 25;
 
-const getNextColor = ()=>{
-  return colors[Math.floor(Math.random() * colors.length)];
-}
+const getNextColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 export function GameBlock() {
   return (
@@ -25,9 +23,9 @@ export function GameBlock() {
       <Stage width="800" height="400">
         <Layer>
           <Text text="Try click on rect" />
-          <I horizontal color={getNextColor()} size={size}/>
+          <I horizontal color={getNextColor()} size={size} />
           <I />
-          <O color={getNextColor()}/>
+          <O color={getNextColor()} />
           <T />
         </Layer>
       </Stage>

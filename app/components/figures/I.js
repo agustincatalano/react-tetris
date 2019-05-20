@@ -6,10 +6,8 @@ export class I extends React.Component {
     const x = 20;
     const y = 20;
     const border = 1;
-    
 
     const { horizontal, color, size } = this.props;
-    
 
     if (horizontal) {
       return (

@@ -7,20 +7,20 @@ export class T extends React.Component {
     const x = 10;
     const y = 120;
     const border = 1;
-    //const position2 = [1, 2, 3, 4];
+    // const position2 = [1, 2, 3, 4];
 
     // const { position } = this.props;
 
-    //if (position[1]) {
-      // return (
-      //   // position 1
-      //   <>
-      //     <Square x={x} y={y} side={side} />
-      //     <Square x={x + side + border} y={y} side={side} />
-      //     <Square x={x + side + border} y={y + side + border} side={side} />
-      //     <Square x={x + (side + border) * 2} y={y} side={side} />
-      //   </>
-      // );
+    // if (position[1]) {
+    // return (
+    //   // position 1
+    //   <>
+    //     <Square x={x} y={y} side={side} />
+    //     <Square x={x + side + border} y={y} side={side} />
+    //     <Square x={x + side + border} y={y + side + border} side={side} />
+    //     <Square x={x + (side + border) * 2} y={y} side={side} />
+    //   </>
+    // );
     // }
     // if (position[2]) {
     //   return (
@@ -60,7 +60,7 @@ export class T extends React.Component {
     //       />
     //     </>
     //   );
-    //}
+    // }
 
     //       //position 1
     //     <>

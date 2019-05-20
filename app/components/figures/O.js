@@ -15,7 +15,12 @@ export class O extends React.Component {
         <Square color={color} x={x} y={y} side={side} />
         <Square color={color} x={x} y={y + side + border} side={side} />
         <Square color={color} x={x + side + border} y={y} side={side} />
-        <Square color={color} x={x + side + border} y={y + side + border} side={side} />
+        <Square
+          color={color}
+          x={x + side + border}
+          y={y + side + border}
+          side={side}
+        />
       </>
     );
   }
