@@ -8,11 +8,6 @@ export class O extends React.Component {
     const y = 30;
     const border = 1;
 
-    return (
-      <>
-        
-      </>
-
-    );
+    return <></>;
   }
 }

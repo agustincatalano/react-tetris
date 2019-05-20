@@ -8,14 +8,15 @@ export class O extends React.Component {
     const y = 70;
     const border = 1;
 
+    const { color } = this.props;
+
     return (
       <>
-        <Square x={x} y={y} side={side} />
-        <Square x={x} y={y + side + border} side={side} />
-        <Square x={x+side + border} y={y} side={side} />
-        <Square x={x+side+ border} y={y+side + border} side={side} />
+        <Square color={color} x={x} y={y} side={side} />
+        <Square color={color} x={x} y={y + side + border} side={side} />
+        <Square color={color} x={x + side + border} y={y} side={side} />
+        <Square color={color} x={x + side + border} y={y + side + border} side={side} />
       </>
-
     );
   }
 }
