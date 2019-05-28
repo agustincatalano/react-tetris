@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { Stage, Layer, Text } from 'react-konva';
-import { I, O, T } from '../figures';
+import { I, O, T, L } from '../figures';
 
 const MyGameBlock = styled.div`
   flex: 1;
@@ -27,6 +27,7 @@ export function GameBlock() {
           <I />
           <O color={getNextColor()} />
           <T />
+          <L />
         </Layer>
       </Stage>
     </MyGameBlock>
