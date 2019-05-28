@@ -14,8 +14,10 @@ const MyGameBlock = styled.div`
 
 const colors = ['blue', 'red', 'green', 'yellow', 'orange', 'pink'];
 const size = 25;
+const currentPosition = [1, 2, 3, 4]
 
 const getNextColor = () => colors[Math.floor(Math.random() * colors.length)];
+const randomPosition = () => currentPosition[Math.floor(Math.random() * colors.length)];
 
 export function GameBlock() {
   return (
@@ -27,7 +29,7 @@ export function GameBlock() {
           <I />
           <O color={getNextColor()} />
           <T />
-          <L />
+          <L position={randomPosition()} />
         </Layer>
       </Stage>
     </MyGameBlock>
