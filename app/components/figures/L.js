@@ -25,14 +25,12 @@ export class L extends React.Component {
       //   <Square x={x} y={y + 2 * (side + border)} side={side} />
       // </>
 
-
       // // position 3
       <>
-        <Square x={x + (2*side) + border} y={y} side={side} />
-        <Square x={x+side+border} y={y} side={side} />
-        <Square x={x+side+border} y={y + side + border} side={side} />
-        <Square x={x+side+border} y={y + 2 * (side + border)} side={side} />
-        
+        <Square x={x + 2 * side + border} y={y} side={side} />
+        <Square x={x + side + border} y={y} side={side} />
+        <Square x={x + side + border} y={y + side + border} side={side} />
+        <Square x={x + side + border} y={y + 2 * (side + border)} side={side} />
       </>
 
       // position 4
@@ -41,7 +39,7 @@ export class L extends React.Component {
       //   <Square x={x+side+border} y={y} side={side} />
       //   <Square x={x+2*side+border} y={y + side + border} side={side} />
       //   <Square x={x+2*side+border} y={y + 2 * (side + border)} side={side} />
-        
+
       // </>
     );
   }
