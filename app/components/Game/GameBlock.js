@@ -18,7 +18,7 @@ const currentPosition = [1, 2, 3, 4];
 
 const getNextColor = () => colors[Math.floor(Math.random() * colors.length)];
 const randomPosition = () =>
-  currentPosition[Math.floor(Math.random() * colors.length)];
+  currentPosition[Math.floor(Math.random() * currentPosition.length)];
 
 export function GameBlock() {
   return (
@@ -29,7 +29,7 @@ export function GameBlock() {
           <I horizontal color={getNextColor()} size={size} />
           <I />
           <O color={getNextColor()} />
-          <T />
+          <T position={randomPosition()}/>
           <L position={randomPosition()} />
         </Layer>
       </Stage>
