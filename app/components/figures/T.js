@@ -9,7 +9,6 @@ export class T extends React.Component {
     const border = 1;
     const { position } = this.props;
 
-
     if (position === 1) {
       return (
         // position 1
@@ -60,7 +59,5 @@ export class T extends React.Component {
         </>
       );
     }
-
-    
   }
 }
