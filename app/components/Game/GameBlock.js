@@ -29,7 +29,7 @@ export function GameBlock() {
           <I horizontal color={getNextColor()} size={size} />
           <I />
           <O color={getNextColor()} />
-          <T position={randomPosition()}/>
+          <T position={randomPosition()} />
           <L position={randomPosition()} />
         </Layer>
       </Stage>
