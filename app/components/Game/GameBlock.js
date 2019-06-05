@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { Stage, Layer, Text } from 'react-konva';
-import { I, HI } from '../figures';
+import { I, O, T, L } from '../figures';
 
 const MyGameBlock = styled.div`
   flex: 1;
@@ -12,22 +12,27 @@ const MyGameBlock = styled.div`
   background-position: center;
 `;
 
-export function GameBlock() {
+const colors = ['blue', 'red', 'green', 'yellow', 'orange', 'pink'];
+const size = 25;
+const currentPosition = [1, 2, 3, 4];
 
+const getNextColor = () => colors[Math.floor(Math.random() * colors.length)];
+const randomPosition = () =>
+  currentPosition[Math.floor(Math.random() * currentPosition.length)];
+
+export function GameBlock() {
   return (
     <MyGameBlock>
-      <Stage width='100' height='200'>
+      <Stage width="800" height="400">
         <Layer>
           <Text text="Try click on rect" />
-          <I/>
-          <HI/>
-          
+          <I horizontal color={getNextColor()} size={size} />
+          <I />
+          <O color={getNextColor()} />
+          <T position={randomPosition()} />
+          <L position={randomPosition()} />
         </Layer>
       </Stage>
-
-      
-       
-      
     </MyGameBlock>
   );
 }

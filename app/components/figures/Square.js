@@ -1,10 +1,9 @@
 import React from 'react';
 import { Rect } from 'react-konva';
 
-
 export class Square extends React.Component {
   render() {
-    const {x, y ,side} = this.props
+    const { x, y, side, color = 'white' } = this.props;
 
     return (
       <Rect
@@ -12,8 +11,8 @@ export class Square extends React.Component {
         y={y}
         width={side}
         height={side}
-        fill='red'
-        shadowBlur={1}        
+        fill={color}
+        shadowBlur={1}
       />
     );
   }
