@@ -9,7 +9,8 @@ export class L extends React.Component {
     const border = 1;
     const { position } = this.props;
 
-    if (position === 1) {
+
+    if (position === 0) {
       return (
         <>
           <Square x={x} y={y} side={side} />
@@ -23,7 +24,7 @@ export class L extends React.Component {
         </>
       );
     }
-    if (position === 2) {
+    if (position === 1) {
       return (
         <>
           <Square x={x + side + border} y={y} side={side} />
@@ -37,7 +38,7 @@ export class L extends React.Component {
         </>
       );
     }
-    if (position === 3) {
+    if (position === 2) {
       return (
         <>
           <Square x={x + 2 * side + border} y={y} side={side} />
@@ -52,7 +53,7 @@ export class L extends React.Component {
       );
     }
 
-    if (position === 4) {
+    if (position === 3) {
       return (
         <>
           <Square x={x + 2 * side + border} y={y} side={side} />

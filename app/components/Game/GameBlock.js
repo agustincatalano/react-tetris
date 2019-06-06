@@ -14,13 +14,22 @@ const MyGameBlock = styled.div`
 
 const colors = ['blue', 'red', 'green', 'yellow', 'orange', 'pink'];
 const size = 25;
-const currentPosition = [1, 2, 3, 4];
 
 const getNextColor = () => colors[Math.floor(Math.random() * colors.length)];
-const randomPosition = () =>
-  currentPosition[Math.floor(Math.random() * currentPosition.length)];
 
 export function GameBlock() {
+  let rotation = 0;
+
+  const rotate = () => {
+    console.log('rotate', rotation);
+
+    if (rotation === 4) {
+      rotation = 0;
+    }
+    rotation += 1;
+  };
+  setInterval(rotate, 1000);
+
   return (
     <MyGameBlock>
       <Stage width="800" height="400">
@@ -29,8 +38,8 @@ export function GameBlock() {
           <I horizontal color={getNextColor()} size={size} />
           <I />
           <O color={getNextColor()} />
-          <T position={randomPosition()} />
-          <L position={randomPosition()} />
+          <T position={rotation} />
+          <L position={0} />
         </Layer>
       </Stage>
     </MyGameBlock>

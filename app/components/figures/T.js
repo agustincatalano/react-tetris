@@ -9,7 +9,8 @@ export class T extends React.Component {
     const border = 1;
     const { position } = this.props;
 
-    if (position === 1) {
+    console.log('position', position)
+    if (position === 0) {
       return (
         // position 1
         <>
@@ -20,7 +21,7 @@ export class T extends React.Component {
         </>
       );
     }
-    if (position === 2) {
+    if (position === 1) {
       return (
         // position 2
         <>
@@ -32,7 +33,7 @@ export class T extends React.Component {
       );
     }
 
-    if (position === 3) {
+    if (position === 2) {
       return (
         // position 3
         <>
@@ -44,7 +45,7 @@ export class T extends React.Component {
       );
     }
 
-    if (position === 4) {
+    if (position === 3) {
       return (
         // position 4
         <>
