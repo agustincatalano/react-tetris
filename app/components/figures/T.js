@@ -9,10 +9,10 @@ export class T extends React.Component {
     const border = 1;
     const { position } = this.props;
 
-    console.log('position', position)
+    console.log('position in T = ',position, this.props)
+
     if (position === 0) {
-      return (
-        // position 1
+      return (    
         <>
           <Square x={x} y={y} side={side} />
           <Square x={x + side + border} y={y} side={side} />
@@ -23,7 +23,6 @@ export class T extends React.Component {
     }
     if (position === 1) {
       return (
-        // position 2
         <>
           <Square x={x} y={y} side={side} />
           <Square x={x + side + border} y={y} side={side} />
@@ -35,19 +34,6 @@ export class T extends React.Component {
 
     if (position === 2) {
       return (
-        // position 3
-        <>
-          <Square x={x} y={y} side={side} />
-          <Square x={x} y={y + side + border} side={side} />
-          <Square x={x} y={y + 2 * (side + border)} side={side} />
-          <Square x={x + (side + border)} y={y + (side + border)} side={side} />
-        </>
-      );
-    }
-
-    if (position === 3) {
-      return (
-        // position 4
         <>
           <Square x={x} y={y} side={side} />
           <Square x={x} y={y + side + border} side={side} />
@@ -60,5 +46,18 @@ export class T extends React.Component {
         </>
       );
     }
+
+    if (position === 3) {
+      return (
+        <>
+          <Square x={x} y={y} side={side} />
+          <Square x={x} y={y + side + border} side={side} />
+          <Square x={x} y={y + 2 * (side + border)} side={side} />
+          <Square x={x + (side + border)} y={y + (side + border)} side={side} />
+        </>
+      );
+    }
+
+ 
   }
 }

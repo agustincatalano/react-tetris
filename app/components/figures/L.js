@@ -9,7 +9,6 @@ export class L extends React.Component {
     const border = 1;
     const { position } = this.props;
 
-
     if (position === 0) {
       return (
         <>
