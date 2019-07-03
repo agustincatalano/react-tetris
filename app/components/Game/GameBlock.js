@@ -18,34 +18,30 @@ const size = 25;
 const getNextColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 export class GameBlock extends React.Component {
-  
-    constructor(props){
-      super(props)
-    this.state = {rotation: 0}
+  constructor(props) {
+    super(props);
+    this.state = { rotation: 0 };
   }
 
-   rotate(){
-    console.log(this)
-    const rotation = this.state.rotation
+  rotate() {
+    console.log(this);
+    const rotation = this.state.rotation;
     if (rotation === 3) {
-      this.setState({rotation: 0})
+      this.setState({ rotation: 0 });
     } else {
-      this.setState({rotation: rotation +1})
+      this.setState({ rotation: rotation + 1 });
     }
     console.log('rotation', rotation);
-  };
-
-  //this is going to be executed only once when the component is added to the DOM tree
-  componentDidMount(){
-    setInterval(()=>{this.rotate()}, 1000);
   }
- 
+
+  // this is going to be executed only once when the component is added to the DOM tree
+  componentDidMount() {
+    setInterval(() => {
+      this.rotate();
+    }, 1000);
+  }
 
   render() {
-
-  
-
-  
     return (
       <MyGameBlock>
         <Stage width="800" height="400">
@@ -58,10 +54,8 @@ export class GameBlock extends React.Component {
             <L position={0} />
           </Layer>
         </Stage>
-        <button onClick={() => rotate()}>Rotate</button>
+        <button onClick={() => this.rotate()}>Rotate</button>
       </MyGameBlock>
     );
   }
-
-   
 }

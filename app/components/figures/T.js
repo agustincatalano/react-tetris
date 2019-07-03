@@ -9,10 +9,10 @@ export class T extends React.Component {
     const border = 1;
     const { position } = this.props;
 
-    console.log('position in T = ',position, this.props)
+    console.log('position in T = ', position, this.props);
 
     if (position === 0) {
-      return (    
+      return (
         <>
           <Square x={x} y={y} side={side} />
           <Square x={x + side + border} y={y} side={side} />
@@ -57,7 +57,6 @@ export class T extends React.Component {
         </>
       );
     }
-
- 
+    return null;
   }
 }
