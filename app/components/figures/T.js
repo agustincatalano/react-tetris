@@ -14,20 +14,24 @@ export class T extends React.Component {
     if (position === 0) {
       return (
         <>
-          <Square x={x} y={y} side={side} />
-          <Square x={x + side + border} y={y} side={side} />
+          <Square x={x} y={y + side + border} side={side} />
           <Square x={x + side + border} y={y + side + border} side={side} />
-          <Square x={x + (side + border) * 2} y={y} side={side} />
+          <Square
+            x={x + (side + border) * 2}
+            y={y + side + border}
+            side={side}
+          />
+          <Square x={x + side + border} y={y} side={side} />
         </>
       );
     }
     if (position === 1) {
       return (
         <>
-          <Square x={x} y={y} side={side} />
-          <Square x={x + side + border} y={y} side={side} />
-          <Square x={x + side + border} y={y - side + border} side={side} />
-          <Square x={x + (side + border) * 2} y={y} side={side} />
+          <Square x={x + side} y={y} side={side} />
+          <Square x={x + side} y={y + side + border} side={side} />
+          <Square x={x + side} y={y + 2 * (side + border)} side={side} />
+          <Square x={x - border} y={y + side + border} side={side} />
         </>
       );
     }
@@ -36,13 +40,9 @@ export class T extends React.Component {
       return (
         <>
           <Square x={x} y={y} side={side} />
-          <Square x={x} y={y + side + border} side={side} />
-          <Square x={x} y={y + 2 * (side + border)} side={side} />
-          <Square
-            x={x + -1 * (side + border)}
-            y={y + (side + border)}
-            side={side}
-          />
+          <Square x={x + side + border} y={y} side={side} />
+          <Square x={x + side + border} y={y + side + border} side={side} />
+          <Square x={x + (side + border) * 2} y={y} side={side} />
         </>
       );
     }
@@ -50,10 +50,10 @@ export class T extends React.Component {
     if (position === 3) {
       return (
         <>
-          <Square x={x} y={y} side={side} />
-          <Square x={x} y={y + side + border} side={side} />
-          <Square x={x} y={y + 2 * (side + border)} side={side} />
-          <Square x={x + (side + border)} y={y + (side + border)} side={side} />
+          <Square x={x + side} y={y} side={side} />
+          <Square x={x + side} y={y + side + border} side={side} />
+          <Square x={x + side} y={y + 2 * (side + border)} side={side} />
+          <Square x={x * 3 + border} y={y + side + border} side={side} />
         </>
       );
     }

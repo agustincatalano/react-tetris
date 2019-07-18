@@ -26,14 +26,10 @@ export class L extends React.Component {
     if (position === 1) {
       return (
         <>
+          <Square x={x} y={y} side={side} />
+          <Square x={x} y={y + side + border} side={side} />
           <Square x={x + side + border} y={y} side={side} />
-          <Square x={x + side + border} y={y + side + border} side={side} />
-          <Square
-            x={x + side + border}
-            y={y + 2 * (side + border)}
-            side={side}
-          />
-          <Square x={x} y={y + 2 * (side + border)} side={side} />
+          <Square x={x + side * 2 + border * 2} y={y} side={side} />
         </>
       );
     }
@@ -42,9 +38,9 @@ export class L extends React.Component {
         <>
           <Square x={x + 2 * side + border} y={y} side={side} />
           <Square x={x + side + border} y={y} side={side} />
-          <Square x={x + side + border} y={y + side + border} side={side} />
+          <Square x={x + 2 * side + border} y={y + side + border} side={side} />
           <Square
-            x={x + side + border}
+            x={x + 2 * side + border}
             y={y + 2 * (side + border)}
             side={side}
           />
@@ -55,12 +51,12 @@ export class L extends React.Component {
     if (position === 3) {
       return (
         <>
-          <Square x={x + 2 * side + border} y={y} side={side} />
-          <Square x={x + side + border} y={y} side={side} />
-          <Square x={x + 2 * side + border} y={y + side + border} side={side} />
+          <Square x={x} y={y + side + border} side={side} />
+          <Square x={x + side * 2 + border * 2} y={y} side={side} />
+          <Square x={x + side + border} y={y + side + border} side={side} />
           <Square
-            x={x + 2 * side + border}
-            y={y + 2 * (side + border)}
+            x={x + side * 2 + border * 2}
+            y={y + side + border}
             side={side}
           />
         </>

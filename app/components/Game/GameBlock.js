@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import { Stage, Layer, Text } from 'react-konva';
-import { I, O, T, L } from '../figures';
+import { I, O, T, L, J } from '../figures';
 
 const MyGameBlock = styled.div`
   flex: 1;
@@ -35,11 +35,11 @@ export class GameBlock extends React.Component {
   }
 
   // this is going to be executed only once when the component is added to the DOM tree
-  componentDidMount() {
-    setInterval(() => {
-      this.rotate();
-    }, 1000);
-  }
+  // componentDidMount() {
+  //   setInterval(() => {
+  //     this.rotate();
+  //   }, 1000);
+  // }
 
   render() {
     return (
@@ -51,7 +51,8 @@ export class GameBlock extends React.Component {
             <I />
             <O color={getNextColor()} />
             <T position={this.state.rotation} />
-            <L position={0} />
+            <L position={this.state.rotation} />
+            <J position={this.state.rotation} />
           </Layer>
         </Stage>
         <button onClick={() => this.rotate()}>Rotate</button>
